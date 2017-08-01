@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KahunaControlAppBootup_Example' do
+  pod 'KahunaControlAppBootup', :path => '../'
+
+  target 'KahunaControlAppBootup_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
