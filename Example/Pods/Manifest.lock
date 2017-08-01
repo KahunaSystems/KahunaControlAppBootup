@@ -1,0 +1,16 @@
+PODS:
+  - KahunaControlAppBootup (0.1.0)
+
+DEPENDENCIES:
+  - KahunaControlAppBootup (from `../`)
+
+EXTERNAL SOURCES:
+  KahunaControlAppBootup:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KahunaControlAppBootup: 71af7469f2b1fd1a5ea44e987ea1696c8e6a9509
+
+PODFILE CHECKSUM: b54a10aeb371b84b21b5fecd3fd41e661e78efc8
+
+COCOAPODS: 1.2.1

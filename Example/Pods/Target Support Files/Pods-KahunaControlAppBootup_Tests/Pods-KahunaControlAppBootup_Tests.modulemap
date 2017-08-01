@@ -1,0 +1,6 @@
+framework module Pods_KahunaControlAppBootup_Tests {
+  umbrella header "Pods-KahunaControlAppBootup_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

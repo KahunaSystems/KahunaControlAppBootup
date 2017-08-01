@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		017543D38D1326680D5C64AD91F45BBC /* Pods-KahunaControlAppBootup_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CF612B916F6C24A2ABF4880CBB5C966 /* Pods-KahunaControlAppBootup_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3712C5EC00D930C4A0A58488CD14CF1F /* KahunaControlAppBootup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC64D7EBE4DBD4B3D21661AA279B74E /* KahunaControlAppBootup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		454D68DB28F392A363E06C1C5059B281 /* KahunaControlAppBootup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C4B4EB50F52F9BECBD86424AB60014 /* KahunaControlAppBootup-dummy.m */; };
+		569182181DC0F3F020743F0F85741E0F /* Pods-KahunaControlAppBootup_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8846CB37FB2E9E3D1A1AB24F50048B8F /* Pods-KahunaControlAppBootup_Example-dummy.m */; };
+		A93CB30A8E04E4A3AED5A0078180BACA /* Pods-KahunaControlAppBootup_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC232CA5A65D59428247B6FE3DD791E /* Pods-KahunaControlAppBootup_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2262EA270C03EF3184F26A96F9122B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B22CADA90D8184D5912E79A1362C8F40 /* Pods-KahunaControlAppBootup_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0D41B1579A404ECF56E34DB17FEAF /* Pods-KahunaControlAppBootup_Tests-dummy.m */; };
+		DF21AC7B5CDF16107ACD0A02AC3C030F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */; };
+		E54C35315ADF22DEFDD3FF85F1B02DE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FAD74B24F0869C0B2AFCB0D77CE47CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		550244490C503199BBDDACFF19639E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A4489808EADF5F33C8FED0966029782;
+			remoteInfo = KahunaControlAppBootup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14655A7A5D834A627D4B6A1BBDFDD2E7 /* KahunaControlAppBootup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KahunaControlAppBootup.modulemap; sourceTree = "<group>"; };
+		19BA5779D5DFEF3DE4C9A002A2CEA65F /* Pods-KahunaControlAppBootup_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KahunaControlAppBootup_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		20968DB3F4B2488AD130AD368B42D45A /* Pods-KahunaControlAppBootup_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2BB43AC55146B3D5E7D8D7663E81BCE8 /* Pods-KahunaControlAppBootup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Example.release.xcconfig"; sourceTree = "<group>"; };
+		38BCA7D4A74F1FBD0E44EC26B77F12C2 /* Pods-KahunaControlAppBootup_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KahunaControlAppBootup_Tests.modulemap"; sourceTree = "<group>"; };
+		3D3BA5AA9FE264F44897C552EE612BB4 /* Pods-KahunaControlAppBootup_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Example-resources.sh"; sourceTree = "<group>"; };
+		3EC232CA5A65D59428247B6FE3DD791E /* Pods-KahunaControlAppBootup_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KahunaControlAppBootup_Example-umbrella.h"; sourceTree = "<group>"; };
+		40B3992E3834663748EFBF01BDDF5C36 /* Pods-KahunaControlAppBootup_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Tests-resources.sh"; sourceTree = "<group>"; };
+		50A758512F232838CC2156ACB0C8324E /* Pods-KahunaControlAppBootup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		6345EDEC48A9B0B520802927412D969C /* Pods-KahunaControlAppBootup_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KahunaControlAppBootup.xcconfig; sourceTree = "<group>"; };
+		6DE0D41B1579A404ECF56E34DB17FEAF /* Pods-KahunaControlAppBootup_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KahunaControlAppBootup_Tests-dummy.m"; sourceTree = "<group>"; };
+		71EA20591C8D0A5D1D6F099895C17953 /* Pods-KahunaControlAppBootup_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KahunaControlAppBootup_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73650736681E24B50488345276539310 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF612B916F6C24A2ABF4880CBB5C966 /* Pods-KahunaControlAppBootup_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KahunaControlAppBootup_Tests-umbrella.h"; sourceTree = "<group>"; };
+		87405FFAB942B8DA632179C62695DD62 /* Pods_KahunaControlAppBootup_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KahunaControlAppBootup_Tests.framework; path = "Pods-KahunaControlAppBootup_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8846CB37FB2E9E3D1A1AB24F50048B8F /* Pods-KahunaControlAppBootup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KahunaControlAppBootup_Example-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5CA24A54D191C4531E15EEBD1719093 /* Pods-KahunaControlAppBootup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KahunaControlAppBootup_Example.modulemap"; sourceTree = "<group>"; };
+		A67E90C0C9235E985602236103B99D2B /* Pods-KahunaControlAppBootup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AED9EC3972C71047AB7B7565EDE85C66 /* Pods-KahunaControlAppBootup_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KahunaControlAppBootup_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BBEEE43FA570A3FB8DAA9611EF2B5F84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1E04EF4811456B2CA0ADC7A43AF8B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC64D7EBE4DBD4B3D21661AA279B74E /* KahunaControlAppBootup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KahunaControlAppBootup-umbrella.h"; sourceTree = "<group>"; };
+		D3146CAB0E0E6EA8E512AB6D26B04244 /* Pods-KahunaControlAppBootup_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KahunaControlAppBootup_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DC81910EA3211F7D0B02B311C7D33213 /* KahunaControlAppBootup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KahunaControlAppBootup-prefix.pch"; sourceTree = "<group>"; };
+		DF3FD53CAD6F5D92F59D3F1C9A22917B /* Pods_KahunaControlAppBootup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KahunaControlAppBootup_Example.framework; path = "Pods-KahunaControlAppBootup_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08F5BB00A45BA21642FA00FC9B96D4A /* Pods-KahunaControlAppBootup_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		E3C4B4EB50F52F9BECBD86424AB60014 /* KahunaControlAppBootup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KahunaControlAppBootup-dummy.m"; sourceTree = "<group>"; };
+		F69AA77FE1B3EB2C13AB8AA087611A5D /* KahunaControlAppBootup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KahunaControlAppBootup.framework; path = KahunaControlAppBootup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		218C1F8850B1FF2F3C0541A9BD60B64C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2262EA270C03EF3184F26A96F9122B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		706C3EBF00139278D7C9B9CBC5836005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E54C35315ADF22DEFDD3FF85F1B02DE3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A3D85F5FA4043A14C85C07E88DC174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD74B24F0869C0B2AFCB0D77CE47CD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		169D2F9A9A9935C2CEA30089B01081BE /* Pods-KahunaControlAppBootup_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BBEEE43FA570A3FB8DAA9611EF2B5F84 /* Info.plist */,
+				38BCA7D4A74F1FBD0E44EC26B77F12C2 /* Pods-KahunaControlAppBootup_Tests.modulemap */,
+				19BA5779D5DFEF3DE4C9A002A2CEA65F /* Pods-KahunaControlAppBootup_Tests-acknowledgements.markdown */,
+				D3146CAB0E0E6EA8E512AB6D26B04244 /* Pods-KahunaControlAppBootup_Tests-acknowledgements.plist */,
+				6DE0D41B1579A404ECF56E34DB17FEAF /* Pods-KahunaControlAppBootup_Tests-dummy.m */,
+				E08F5BB00A45BA21642FA00FC9B96D4A /* Pods-KahunaControlAppBootup_Tests-frameworks.sh */,
+				40B3992E3834663748EFBF01BDDF5C36 /* Pods-KahunaControlAppBootup_Tests-resources.sh */,
+				7CF612B916F6C24A2ABF4880CBB5C966 /* Pods-KahunaControlAppBootup_Tests-umbrella.h */,
+				A67E90C0C9235E985602236103B99D2B /* Pods-KahunaControlAppBootup_Tests.debug.xcconfig */,
+				6345EDEC48A9B0B520802927412D969C /* Pods-KahunaControlAppBootup_Tests.release.xcconfig */,
+			);
+			name = "Pods-KahunaControlAppBootup_Tests";
+			path = "Target Support Files/Pods-KahunaControlAppBootup_Tests";
+			sourceTree = "<group>";
+		};
+		30B164BC5AF5E12375D770CC3C202200 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51A362AD92EFA3A0D1CD88E3D9DE2616 /* KahunaControlAppBootup */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		51A362AD92EFA3A0D1CD88E3D9DE2616 /* KahunaControlAppBootup */ = {
+			isa = PBXGroup;
+			children = (
+				AC25BB8E753593126E982FC4E0840A19 /* KahunaControlAppBootup */,
+				C733F9379CFAC756EA15F1E72A01B5BC /* Support Files */,
+			);
+			name = KahunaControlAppBootup;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		576E08C4FA95295F28F464C217A2D110 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				794F5E2CB8C5F192D4D7BE1CFA8FF794 /* Pods-KahunaControlAppBootup_Example */,
+				169D2F9A9A9935C2CEA30089B01081BE /* Pods-KahunaControlAppBootup_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		794F5E2CB8C5F192D4D7BE1CFA8FF794 /* Pods-KahunaControlAppBootup_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BD1E04EF4811456B2CA0ADC7A43AF8B5 /* Info.plist */,
+				A5CA24A54D191C4531E15EEBD1719093 /* Pods-KahunaControlAppBootup_Example.modulemap */,
+				71EA20591C8D0A5D1D6F099895C17953 /* Pods-KahunaControlAppBootup_Example-acknowledgements.markdown */,
+				AED9EC3972C71047AB7B7565EDE85C66 /* Pods-KahunaControlAppBootup_Example-acknowledgements.plist */,
+				8846CB37FB2E9E3D1A1AB24F50048B8F /* Pods-KahunaControlAppBootup_Example-dummy.m */,
+				20968DB3F4B2488AD130AD368B42D45A /* Pods-KahunaControlAppBootup_Example-frameworks.sh */,
+				3D3BA5AA9FE264F44897C552EE612BB4 /* Pods-KahunaControlAppBootup_Example-resources.sh */,
+				3EC232CA5A65D59428247B6FE3DD791E /* Pods-KahunaControlAppBootup_Example-umbrella.h */,
+				50A758512F232838CC2156ACB0C8324E /* Pods-KahunaControlAppBootup_Example.debug.xcconfig */,
+				2BB43AC55146B3D5E7D8D7663E81BCE8 /* Pods-KahunaControlAppBootup_Example.release.xcconfig */,
+			);
+			name = "Pods-KahunaControlAppBootup_Example";
+			path = "Target Support Files/Pods-KahunaControlAppBootup_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				30B164BC5AF5E12375D770CC3C202200 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				978A61427AA8927EDE91CDBFB7AC0977 /* Products */,
+				576E08C4FA95295F28F464C217A2D110 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		978A61427AA8927EDE91CDBFB7AC0977 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69AA77FE1B3EB2C13AB8AA087611A5D /* KahunaControlAppBootup.framework */,
+				DF3FD53CAD6F5D92F59D3F1C9A22917B /* Pods_KahunaControlAppBootup_Example.framework */,
+				87405FFAB942B8DA632179C62695DD62 /* Pods_KahunaControlAppBootup_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC25BB8E753593126E982FC4E0840A19 /* KahunaControlAppBootup */ = {
+			isa = PBXGroup;
+			children = (
+				F0689C3CFE904CE03568BCD1C14AF787 /* Classes */,
+			);
+			name = KahunaControlAppBootup;
+			path = KahunaControlAppBootup;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C733F9379CFAC756EA15F1E72A01B5BC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73650736681E24B50488345276539310 /* Info.plist */,
+				14655A7A5D834A627D4B6A1BBDFDD2E7 /* KahunaControlAppBootup.modulemap */,
+				6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */,
+				E3C4B4EB50F52F9BECBD86424AB60014 /* KahunaControlAppBootup-dummy.m */,
+				DC81910EA3211F7D0B02B311C7D33213 /* KahunaControlAppBootup-prefix.pch */,
+				BFC64D7EBE4DBD4B3D21661AA279B74E /* KahunaControlAppBootup-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KahunaControlAppBootup";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F0689C3CFE904CE03568BCD1C14AF787 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		026A0DBB40F2DDA54D7CB5A1306AC377 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3712C5EC00D930C4A0A58488CD14CF1F /* KahunaControlAppBootup-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA364AD219594CCAE8D12775BFBC11F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93CB30A8E04E4A3AED5A0078180BACA /* Pods-KahunaControlAppBootup_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CB24C396229205A95C2AB22581B76F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017543D38D1326680D5C64AD91F45BBC /* Pods-KahunaControlAppBootup_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A4489808EADF5F33C8FED0966029782 /* KahunaControlAppBootup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F154A5E4E1F805A4321C15ED497A4584 /* Build configuration list for PBXNativeTarget "KahunaControlAppBootup" */;
+			buildPhases = (
+				962EFFBCE916819046ABE19EBC3F48F3 /* Sources */,
+				706C3EBF00139278D7C9B9CBC5836005 /* Frameworks */,
+				026A0DBB40F2DDA54D7CB5A1306AC377 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KahunaControlAppBootup;
+			productName = KahunaControlAppBootup;
+			productReference = F69AA77FE1B3EB2C13AB8AA087611A5D /* KahunaControlAppBootup.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		718FA33C1FA0C62DE5064DAAC843A2A8 /* Pods-KahunaControlAppBootup_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8D9D9F8E2B696B8D78755AD68D04B53 /* Build configuration list for PBXNativeTarget "Pods-KahunaControlAppBootup_Example" */;
+			buildPhases = (
+				22FBC917FAB28A4F00E705B70E965DC4 /* Sources */,
+				C8A3D85F5FA4043A14C85C07E88DC174 /* Frameworks */,
+				4DA364AD219594CCAE8D12775BFBC11F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63DE04D20892104D70A9A53BA65AFF7B /* PBXTargetDependency */,
+			);
+			name = "Pods-KahunaControlAppBootup_Example";
+			productName = "Pods-KahunaControlAppBootup_Example";
+			productReference = DF3FD53CAD6F5D92F59D3F1C9A22917B /* Pods_KahunaControlAppBootup_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C5E565FE180831DDF5685E91AE77053B /* Pods-KahunaControlAppBootup_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E0C4356795B7A2843D615E3A6E30F1D /* Build configuration list for PBXNativeTarget "Pods-KahunaControlAppBootup_Tests" */;
+			buildPhases = (
+				8A4396E7F0444F4755C7A974372A5543 /* Sources */,
+				218C1F8850B1FF2F3C0541A9BD60B64C /* Frameworks */,
+				C2CB24C396229205A95C2AB22581B76F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-KahunaControlAppBootup_Tests";
+			productName = "Pods-KahunaControlAppBootup_Tests";
+			productReference = 87405FFAB942B8DA632179C62695DD62 /* Pods_KahunaControlAppBootup_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 978A61427AA8927EDE91CDBFB7AC0977 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A4489808EADF5F33C8FED0966029782 /* KahunaControlAppBootup */,
+				718FA33C1FA0C62DE5064DAAC843A2A8 /* Pods-KahunaControlAppBootup_Example */,
+				C5E565FE180831DDF5685E91AE77053B /* Pods-KahunaControlAppBootup_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22FBC917FAB28A4F00E705B70E965DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				569182181DC0F3F020743F0F85741E0F /* Pods-KahunaControlAppBootup_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4396E7F0444F4755C7A974372A5543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22CADA90D8184D5912E79A1362C8F40 /* Pods-KahunaControlAppBootup_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962EFFBCE916819046ABE19EBC3F48F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454D68DB28F392A363E06C1C5059B281 /* KahunaControlAppBootup-dummy.m in Sources */,
+				DF21AC7B5CDF16107ACD0A02AC3C030F /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63DE04D20892104D70A9A53BA65AFF7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KahunaControlAppBootup;
+			target = 4A4489808EADF5F33C8FED0966029782 /* KahunaControlAppBootup */;
+			targetProxy = 550244490C503199BBDDACFF19639E2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3397E0B75A526FC89ED7C7E7FA008608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB43AC55146B3D5E7D8D7663E81BCE8 /* Pods-KahunaControlAppBootup_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Example/Pods-KahunaControlAppBootup_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KahunaControlAppBootup_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A42C50F2F5D9755FF0D427F4E9B27A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KahunaControlAppBootup/KahunaControlAppBootup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KahunaControlAppBootup/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KahunaControlAppBootup/KahunaControlAppBootup.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KahunaControlAppBootup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B2454575F106AE5BA0C88C2842EF8C01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6345EDEC48A9B0B520802927412D969C /* Pods-KahunaControlAppBootup_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Tests/Pods-KahunaControlAppBootup_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KahunaControlAppBootup_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C82B51F75F4244A805C6AE669150DBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67E90C0C9235E985602236103B99D2B /* Pods-KahunaControlAppBootup_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Tests/Pods-KahunaControlAppBootup_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KahunaControlAppBootup_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0658057193176A5D2EC6EBED406E7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KahunaControlAppBootup/KahunaControlAppBootup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KahunaControlAppBootup/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KahunaControlAppBootup/KahunaControlAppBootup.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KahunaControlAppBootup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1F460A4259DC45DAA7A516D5F75A332 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A758512F232838CC2156ACB0C8324E /* Pods-KahunaControlAppBootup_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KahunaControlAppBootup_Example/Pods-KahunaControlAppBootup_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KahunaControlAppBootup_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E0C4356795B7A2843D615E3A6E30F1D /* Build configuration list for PBXNativeTarget "Pods-KahunaControlAppBootup_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C82B51F75F4244A805C6AE669150DBDD /* Debug */,
+				B2454575F106AE5BA0C88C2842EF8C01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8D9D9F8E2B696B8D78755AD68D04B53 /* Build configuration list for PBXNativeTarget "Pods-KahunaControlAppBootup_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F460A4259DC45DAA7A516D5F75A332 /* Debug */,
+				3397E0B75A526FC89ED7C7E7FA008608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F154A5E4E1F805A4321C15ED497A4584 /* Build configuration list for PBXNativeTarget "KahunaControlAppBootup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A42C50F2F5D9755FF0D427F4E9B27A87 /* Debug */,
+				E0658057193176A5D2EC6EBED406E7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

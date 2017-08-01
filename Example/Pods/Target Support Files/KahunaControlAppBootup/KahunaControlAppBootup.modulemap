@@ -1,0 +1,6 @@
+framework module KahunaControlAppBootup {
+  umbrella header "KahunaControlAppBootup-umbrella.h"
+
+  export *
+  module * { export * }
+}
