@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/KahunaControlAppBootup.svg?style=flat)](http://cocoapods.org/pods/KahunaControlAppBootup)
 [![Platform](https://img.shields.io/cocoapods/p/KahunaControlAppBootup.svg?style=flat)](http://cocoapods.org/pods/KahunaControlAppBootup)
 
+![LogCamp](http://www.kahuna-mobihub.com/templates/ja_puresite/images/logo-trans.png)
+
+KahunaControlAppBootup is written in Swift
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -17,7 +21,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KahunaControlAppBootup"
+pod 'KahunaControlAppBootup'
 ```
 
 ## Author

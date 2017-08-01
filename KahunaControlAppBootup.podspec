@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KahunaControlAppBootup'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KahunaControlAppBootup.'
+  s.summary          = 'KahunaControlAppBootup library to detect an app to boot or not'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+KahunaControlAppBootup library to detect an app to boot or not based on that apply app version, os version and  free space in a device.
                        DESC
 
   s.homepage         = 'https://github.com/siddharthchopra/KahunaControlAppBootup'
