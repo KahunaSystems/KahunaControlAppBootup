@@ -14,7 +14,9 @@
 		A93CB30A8E04E4A3AED5A0078180BACA /* Pods-KahunaControlAppBootup_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC232CA5A65D59428247B6FE3DD791E /* Pods-KahunaControlAppBootup_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2262EA270C03EF3184F26A96F9122B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		B22CADA90D8184D5912E79A1362C8F40 /* Pods-KahunaControlAppBootup_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0D41B1579A404ECF56E34DB17FEAF /* Pods-KahunaControlAppBootup_Tests-dummy.m */; };
-		DF21AC7B5CDF16107ACD0A02AC3C030F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */; };
+		CC7FFF361F30A780009F28BC /* AppBootupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF351F30A780009F28BC /* AppBootupHandler.swift */; };
+		CC7FFF391F30C1AA009F28BC /* KahunaAppBootup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF371F30C1AA009F28BC /* KahunaAppBootup.swift */; };
+		CC7FFF3A1F30C1AA009F28BC /* KahunaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF381F30C1AA009F28BC /* KahunaStatus.swift */; };
 		E54C35315ADF22DEFDD3FF85F1B02DE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FAD74B24F0869C0B2AFCB0D77CE47CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -30,16 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14655A7A5D834A627D4B6A1BBDFDD2E7 /* KahunaControlAppBootup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KahunaControlAppBootup.modulemap; sourceTree = "<group>"; };
+		14655A7A5D834A627D4B6A1BBDFDD2E7 /* KahunaControlAppBootup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KahunaControlAppBootup.modulemap; sourceTree = "<group>"; };
 		19BA5779D5DFEF3DE4C9A002A2CEA65F /* Pods-KahunaControlAppBootup_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KahunaControlAppBootup_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		20968DB3F4B2488AD130AD368B42D45A /* Pods-KahunaControlAppBootup_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2BB43AC55146B3D5E7D8D7663E81BCE8 /* Pods-KahunaControlAppBootup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Example.release.xcconfig"; sourceTree = "<group>"; };
-		38BCA7D4A74F1FBD0E44EC26B77F12C2 /* Pods-KahunaControlAppBootup_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KahunaControlAppBootup_Tests.modulemap"; sourceTree = "<group>"; };
+		38BCA7D4A74F1FBD0E44EC26B77F12C2 /* Pods-KahunaControlAppBootup_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KahunaControlAppBootup_Tests.modulemap"; sourceTree = "<group>"; };
 		3D3BA5AA9FE264F44897C552EE612BB4 /* Pods-KahunaControlAppBootup_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Example-resources.sh"; sourceTree = "<group>"; };
 		3EC232CA5A65D59428247B6FE3DD791E /* Pods-KahunaControlAppBootup_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KahunaControlAppBootup_Example-umbrella.h"; sourceTree = "<group>"; };
 		40B3992E3834663748EFBF01BDDF5C36 /* Pods-KahunaControlAppBootup_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Tests-resources.sh"; sourceTree = "<group>"; };
 		50A758512F232838CC2156ACB0C8324E /* Pods-KahunaControlAppBootup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		6345EDEC48A9B0B520802927412D969C /* Pods-KahunaControlAppBootup_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KahunaControlAppBootup.xcconfig; sourceTree = "<group>"; };
@@ -47,21 +48,24 @@
 		71EA20591C8D0A5D1D6F099895C17953 /* Pods-KahunaControlAppBootup_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KahunaControlAppBootup_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73650736681E24B50488345276539310 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CF612B916F6C24A2ABF4880CBB5C966 /* Pods-KahunaControlAppBootup_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KahunaControlAppBootup_Tests-umbrella.h"; sourceTree = "<group>"; };
-		87405FFAB942B8DA632179C62695DD62 /* Pods_KahunaControlAppBootup_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KahunaControlAppBootup_Tests.framework; path = "Pods-KahunaControlAppBootup_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87405FFAB942B8DA632179C62695DD62 /* Pods_KahunaControlAppBootup_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KahunaControlAppBootup_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8846CB37FB2E9E3D1A1AB24F50048B8F /* Pods-KahunaControlAppBootup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KahunaControlAppBootup_Example-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5CA24A54D191C4531E15EEBD1719093 /* Pods-KahunaControlAppBootup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KahunaControlAppBootup_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5CA24A54D191C4531E15EEBD1719093 /* Pods-KahunaControlAppBootup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KahunaControlAppBootup_Example.modulemap"; sourceTree = "<group>"; };
 		A67E90C0C9235E985602236103B99D2B /* Pods-KahunaControlAppBootup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KahunaControlAppBootup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AED9EC3972C71047AB7B7565EDE85C66 /* Pods-KahunaControlAppBootup_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KahunaControlAppBootup_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		BBEEE43FA570A3FB8DAA9611EF2B5F84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1E04EF4811456B2CA0ADC7A43AF8B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC64D7EBE4DBD4B3D21661AA279B74E /* KahunaControlAppBootup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KahunaControlAppBootup-umbrella.h"; sourceTree = "<group>"; };
+		CC7FFF351F30A780009F28BC /* AppBootupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBootupHandler.swift; sourceTree = "<group>"; };
+		CC7FFF371F30C1AA009F28BC /* KahunaAppBootup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KahunaAppBootup.swift; sourceTree = "<group>"; };
+		CC7FFF381F30C1AA009F28BC /* KahunaStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KahunaStatus.swift; sourceTree = "<group>"; };
 		D3146CAB0E0E6EA8E512AB6D26B04244 /* Pods-KahunaControlAppBootup_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KahunaControlAppBootup_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DC81910EA3211F7D0B02B311C7D33213 /* KahunaControlAppBootup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KahunaControlAppBootup-prefix.pch"; sourceTree = "<group>"; };
-		DF3FD53CAD6F5D92F59D3F1C9A22917B /* Pods_KahunaControlAppBootup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KahunaControlAppBootup_Example.framework; path = "Pods-KahunaControlAppBootup_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3FD53CAD6F5D92F59D3F1C9A22917B /* Pods_KahunaControlAppBootup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KahunaControlAppBootup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08F5BB00A45BA21642FA00FC9B96D4A /* Pods-KahunaControlAppBootup_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KahunaControlAppBootup_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E3C4B4EB50F52F9BECBD86424AB60014 /* KahunaControlAppBootup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KahunaControlAppBootup-dummy.m"; sourceTree = "<group>"; };
-		F69AA77FE1B3EB2C13AB8AA087611A5D /* KahunaControlAppBootup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KahunaControlAppBootup.framework; path = KahunaControlAppBootup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69AA77FE1B3EB2C13AB8AA087611A5D /* KahunaControlAppBootup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KahunaControlAppBootup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +185,6 @@
 			children = (
 				F0689C3CFE904CE03568BCD1C14AF787 /* Classes */,
 			);
-			name = KahunaControlAppBootup;
 			path = KahunaControlAppBootup;
 			sourceTree = "<group>";
 		};
@@ -218,9 +221,10 @@
 		F0689C3CFE904CE03568BCD1C14AF787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5EFBACBC77DC7D5813275497E2CC13F1 /* ReplaceMe.swift */,
+				CC7FFF351F30A780009F28BC /* AppBootupHandler.swift */,
+				CC7FFF371F30C1AA009F28BC /* KahunaAppBootup.swift */,
+				CC7FFF381F30C1AA009F28BC /* KahunaStatus.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -314,6 +318,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					4A4489808EADF5F33C8FED0966029782 = {
+						LastSwiftMigration = 0820;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -356,7 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				454D68DB28F392A363E06C1C5059B281 /* KahunaControlAppBootup-dummy.m in Sources */,
-				DF21AC7B5CDF16107ACD0A02AC3C030F /* ReplaceMe.swift in Sources */,
+				CC7FFF3A1F30C1AA009F28BC /* KahunaStatus.swift in Sources */,
+				CC7FFF361F30A780009F28BC /* AppBootupHandler.swift in Sources */,
+				CC7FFF391F30C1AA009F28BC /* KahunaAppBootup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -613,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CA211E6A7A97A03C16F1FE90DF03883 /* KahunaControlAppBootup.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
