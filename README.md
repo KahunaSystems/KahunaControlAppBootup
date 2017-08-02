@@ -42,12 +42,14 @@ OR
 ```swift
 shared.initAllAppBootupKeys(appId: logCampId, checkFreeSpace: true)
 ```
-> _Note:_ For Production app type by default value of production = false
+> _Note:_ Default value for checkFreeSpace = false
+
+## Set for Production app type
 
 ```swift
 shared.isAppTypeProduction(flag: true)
 ```
-
+> _Note:_ Default value for production = false
 
 ## Detect an app to boot or not in a device based on that apply app version, os version and free space.
 ```swift
