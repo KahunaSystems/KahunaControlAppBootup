@@ -14,6 +14,7 @@ KahunaControlAppBootup is written in Swift
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+In order to access this feature of app boot up, you need to have Kahuna Logcamp Id
 
 ## Installation
 
