@@ -42,7 +42,7 @@ appType: 0 -> QA and
 appType: 1 -> Production
 
 
-## Detect an app to boot or not when success == true and jsonObject is KahunaAppBootup then we need to perform check actions and show message.
+## Detect an app to boot or not in a device based on that apply app version, os version and free space.
 ```swift
 shared.getAppBootupActionMessage { (success, jsonObject) in
     if success && jsonObject is KahunaAppBootup {
@@ -52,6 +52,13 @@ shared.getAppBootupActionMessage { (success, jsonObject) in
     }
 }
 ```
+> _Note:_
+When success == true and jsonObject is KahunaAppBootup 
+then we need to perform check actions and show message
+- Action BLOCK -> Restrict User to use an app
+- Action WARNING -> Prompt message in an alert to User
+- Action REDIRECT_TO_APPSTORE -> Prompt message in an alert to User and click ok then redirect to app store to update an app version
+- Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User and click ok then redirect to device settings to update an os version
 
 ## Author
 
