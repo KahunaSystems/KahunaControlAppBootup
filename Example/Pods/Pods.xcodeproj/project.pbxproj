@@ -17,6 +17,9 @@
 		CC7FFF361F30A780009F28BC /* AppBootupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF351F30A780009F28BC /* AppBootupHandler.swift */; };
 		CC7FFF391F30C1AA009F28BC /* KahunaAppBootup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF371F30C1AA009F28BC /* KahunaAppBootup.swift */; };
 		CC7FFF3A1F30C1AA009F28BC /* KahunaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FFF381F30C1AA009F28BC /* KahunaStatus.swift */; };
+		CC7FFF3B1F31C150009F28BC /* AppBootupHandler.swift in Headers */ = {isa = PBXBuildFile; fileRef = CC7FFF351F30A780009F28BC /* AppBootupHandler.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC7FFF3C1F31C150009F28BC /* KahunaAppBootup.swift in Headers */ = {isa = PBXBuildFile; fileRef = CC7FFF371F30C1AA009F28BC /* KahunaAppBootup.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC7FFF3D1F31C150009F28BC /* KahunaStatus.swift in Headers */ = {isa = PBXBuildFile; fileRef = CC7FFF381F30C1AA009F28BC /* KahunaStatus.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		E54C35315ADF22DEFDD3FF85F1B02DE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FAD74B24F0869C0B2AFCB0D77CE47CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -236,6 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3712C5EC00D930C4A0A58488CD14CF1F /* KahunaControlAppBootup-umbrella.h in Headers */,
+				CC7FFF3B1F31C150009F28BC /* AppBootupHandler.swift in Headers */,
+				CC7FFF3D1F31C150009F28BC /* KahunaStatus.swift in Headers */,
+				CC7FFF3C1F31C150009F28BC /* KahunaAppBootup.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

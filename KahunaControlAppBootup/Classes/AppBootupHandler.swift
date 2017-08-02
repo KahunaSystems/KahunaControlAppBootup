@@ -94,7 +94,11 @@ public class AppBootupHandler: NSObject {
                         let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
                         DispatchQueue.main.async {
                             let kahunaAppBootup = KahunaAppBootup(fromDictionary: jsonObject as! NSDictionary)
-                            completionHandler(true, kahunaAppBootup)
+                            if kahunaAppBootup.status != nil && kahunaAppBootup.status.code != 200 {
+                                completionHandler(true, kahunaAppBootup)
+                            } else {
+                                completionHandler(false, nil)
+                            }
                         }
                     } catch let Error as NSError {
                         print(Error.description)
