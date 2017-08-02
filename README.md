@@ -21,8 +21,34 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.1.1'
+pod 'KahunaControlAppBootup', '~> 0.1.2'
 ```
+> New development will happen exclusively on the master/Swift 3 branch.
+
+## Set Server URL
+```swift
+let shared = AppBootupHandler.sharedInstance
+shared.initServerBaseURL(serverBaseURL: kServerBaseURL)
+
+Note:
+Add import KahunaControlAppBootup into respected file
+
+## Set all App Boot Up keys
+
+shared.initAllAppBootupKeys(appId: logCampId, appType: 0, appVersion: appVersion, osVersion: osVersion, freeSpace: freeSpace)
+appType: 0 -> QA
+appType: 1 -> Production
+
+## Detect an app to boot or not when success == true and jsonObject is KahunaAppBootup then we need to perform check actions and show message.
+
+shared.getAppBootupActionMessage { (success, jsonObject) in
+    if success && jsonObject is KahunaAppBootup {
+    let kahunaAppBooup = jsonObject as! KahunaAppBootup
+        print(kahunaAppBooup.action)
+        print(kahunaAppBooup.message)
+    }
+}
+
 
 ## Author
 

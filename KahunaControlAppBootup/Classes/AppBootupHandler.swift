@@ -72,7 +72,7 @@ public class AppBootupHandler: NSObject {
         jsonDic.setValue(self.appVersion, forKey: "appVersion")
         jsonDic.setValue(self.osVersion, forKey: "osVersion")
         if self.freeSpace != nil && self.freeSpace.characters.count > 0 {
-            jsonDic.setValue(self.osVersion, forKey: "osVersion")
+            jsonDic.setValue(self.freeSpace, forKey: "freeSpace")
         }
         return jsonDic
     }
