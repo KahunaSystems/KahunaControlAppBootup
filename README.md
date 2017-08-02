@@ -21,7 +21,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup'
+pod 'KahunaControlAppBootup', '~> 0.1.1'
 ```
 
 ## Author
