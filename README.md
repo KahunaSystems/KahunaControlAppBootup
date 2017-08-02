@@ -29,18 +29,20 @@ pod 'KahunaControlAppBootup', '~> 0.1.2'
 ```swift
 let shared = AppBootupHandler.sharedInstance
 shared.initServerBaseURL(serverBaseURL: kServerBaseURL)
-
+```
 Note:
 Add import KahunaControlAppBootup into respected file
 
 ## Set all App Boot Up keys
-
+```swift
 shared.initAllAppBootupKeys(appId: logCampId, appType: 0, appVersion: appVersion, osVersion: osVersion, freeSpace: freeSpace)
+> _Note:_
 appType: 0 -> QA
 appType: 1 -> Production
+```
 
 ## Detect an app to boot or not when success == true and jsonObject is KahunaAppBootup then we need to perform check actions and show message.
-
+```swift
 shared.getAppBootupActionMessage { (success, jsonObject) in
     if success && jsonObject is KahunaAppBootup {
     let kahunaAppBooup = jsonObject as! KahunaAppBootup
@@ -48,7 +50,7 @@ shared.getAppBootupActionMessage { (success, jsonObject) in
         print(kahunaAppBooup.message)
     }
 }
-
+```
 
 ## Author
 
