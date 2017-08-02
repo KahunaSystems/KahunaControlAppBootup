@@ -19,6 +19,7 @@ public class AppBootupHandler: NSObject {
     var appType = String()
     let endPoint = "/datarepo/v1/controlAppBootup/check"
     let kTimeoutInterval = 60
+    var production = false
 
     public static let sharedInstance = AppBootupHandler()
 
@@ -31,13 +32,35 @@ public class AppBootupHandler: NSObject {
         print("** InstagramFeedHandler deinit called **")
     }
 
-    public func initAllAppBootupKeys(appId: String, appType: String, appVersion: String, osVersion: String, freeSpace: String? = nil) {
+    public func isAppTypeProduction(flag: Bool) {
+        self.production = flag
+    }
+
+
+    func deviceRemainingFreeSpaceInBytes() -> String? {
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
+        guard
+            let systemAttributes = try? FileManager.default.attributesOfFileSystem(forPath: documentDirectory),
+            let freeSize = systemAttributes[.systemFreeSize] as? NSNumber
+            else {
+            // something failed
+            return nil
+        }
+        return freeSize.stringValue
+    }
+
+    public func initAllAppBootupKeys(appId: String, checkFreeSpace: Bool = false) {
         self.appId = appId
-        self.appVersion = appVersion
-        self.osVersion = osVersion
-        self.appType = appType
-        if freeSpace != nil, let strSpace = freeSpace! as? String {
-            self.freeSpace = strSpace
+        if let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String {
+            self.appVersion = appVersion
+            self.osVersion = UIDevice.current.systemVersion
+            self.appType = self.production ? "1" : "0"
+            if checkFreeSpace {
+                let space = self.deviceRemainingFreeSpaceInBytes()
+                if space != nil {
+                    self.freeSpace = space!
+                }
+            }
         }
     }
 
@@ -78,7 +101,7 @@ public class AppBootupHandler: NSObject {
     }
 
     public func getAppBootupActionMessage(completionHandler: @escaping AppBootupCompletionBlock) {
-        if self.serverBaseURL != nil {
+        if self.serverBaseURL != nil && self.serverBaseURL.characters.count > 0 && self.appId != nil && self.appId.characters.count > 0 {
             let jsonDic = self.createParametersDic()
             let urlStr = self.serverBaseURL + self.endPoint
             let request = self.createURLRequest(urlStr, parameters: jsonDic, timeoutInterval: kTimeoutInterval)

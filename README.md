@@ -21,7 +21,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.1.2'
+pod 'KahunaControlAppBootup', '~> 0.1.3'
 ```
 > New development will happen exclusively on the master/Swift 3 branch.
 
@@ -33,13 +33,20 @@ shared.initServerBaseURL(serverBaseURL: kServerBaseURL)
 Note:
 Add import KahunaControlAppBootup into respected file
 
-## Set all App Boot Up keys
+## Set all App Boot Up key and default bool value of checkFreeSpace = false
 ```swift
-shared.initAllAppBootupKeys(appId: logCampId, appType: 0, appVersion: appVersion, osVersion: osVersion, freeSpace: freeSpace)
+shared.initAllAppBootupKeys(appId: logCampId)
 ```
-> _Note:_
-appType: 0 -> QA and
-appType: 1 -> Production
+OR
+
+```swift
+shared.initAllAppBootupKeys(appId: logCampId, checkFreeSpace: true)
+```
+> _Note:_ For Production app type by default value of production = false
+
+```swift
+shared.isAppTypeProduction(flag: true)
+```
 
 
 ## Detect an app to boot or not in a device based on that apply app version, os version and free space.
