@@ -38,7 +38,7 @@ Add import KahunaControlAppBootup into respected file
 shared.initAllAppBootupKeys(appId: logCampId, appType: 0, appVersion: appVersion, osVersion: osVersion, freeSpace: freeSpace)
 ```
 > _Note:_
-appType: 0 -> QA
+appType: 0 -> QA and
 appType: 1 -> Production
 
 
