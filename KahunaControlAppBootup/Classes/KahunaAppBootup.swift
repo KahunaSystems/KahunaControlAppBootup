@@ -11,6 +11,7 @@ public class KahunaAppBootup: NSObject {
 
     public var action: String!
     public var message: String!
+    public var title: String!
     public var status: KahunaStatus!
 
     /**
@@ -19,6 +20,7 @@ public class KahunaAppBootup: NSObject {
     init(fromDictionary dictionary: NSDictionary) {
         action = dictionary["action"] as? String
         message = dictionary["message"] as? String
+        title = dictionary["title"] as? String
         if let statusData = dictionary["status"] as? [String: Any] {
             status = KahunaStatus(fromDictionary: statusData)
         }

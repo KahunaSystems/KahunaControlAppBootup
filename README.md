@@ -22,7 +22,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.1.3'
+pod 'KahunaControlAppBootup', '~> 0.1.4'
 ```
 > New development will happen exclusively on the master/Swift 3 branch.
 
@@ -59,16 +59,17 @@ shared.getAppBootupActionMessage { (success, jsonObject) in
     let kahunaAppBooup = jsonObject as! KahunaAppBootup
         print(kahunaAppBooup.action)
         print(kahunaAppBooup.message)
+        print(kahunaAppBooup.title)
     }
 }
 ```
 > _Note:_
 When success == true and jsonObject is KahunaAppBootup 
-then we need to perform check actions and show message
-- Action BLOCK -> Restrict User to use an app
-- Action WARNING -> Prompt message in an alert to User
-- Action REDIRECT_TO_APPSTORE -> Prompt message in an alert to User and click ok then redirect to app store to update an app version
-- Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User and click ok then redirect to device settings to update an os version
+then we need to perform check actions and show message with title
+- Action BLOCK -> Restrict User to use an app by showing title and message in a alert
+- Action WARNING -> Prompt message in an alert to User with title
+- Action REDIRECT_TO_APPSTORE -> Prompt message in an alert to User with title and click ok then redirect to app store to update an app version
+- Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User with title and click ok then redirect to device settings to update an os version
 
 ## Author
 
