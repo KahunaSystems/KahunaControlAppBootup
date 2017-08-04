@@ -60,16 +60,19 @@ shared.getAppBootupActionMessage { (success, jsonObject) in
         print(kahunaAppBooup.action)
         print(kahunaAppBooup.message)
         print(kahunaAppBooup.title)
+        print(kahunaAppBooup.url)
     }
 }
 ```
 > _Note:_
 When success == true and jsonObject is KahunaAppBootup 
 then we need to perform check actions and show message with title
-- Action BLOCK -> Restrict User to use an app by showing title and message in a alert
-- Action WARNING -> Prompt message in an alert to User with title
-- Action REDIRECT_TO_APPSTORE -> Prompt message in an alert to User with title and click ok then redirect to app store to update an app version
-- Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User with title and click ok then redirect to device settings to update an os version
+- Action BLOCK -> Restrict User to use an app by showing title and message in a alert.
+- Action WARNING -> Prompt message in an alert to User with title.
+- Action REDIRECT_TO_APPSTORE -> Prompt message in an alert to User with title and click ok then redirect to app store to update an app version.
+- Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User with title and click ok then redirect to device settings to update an os version.
+- Action REDIRECT_TO_URLLINK -> Prompt message in an alert to User with title and click install then redirect to respective url to update an app version.
+
 
 ## Author
 
