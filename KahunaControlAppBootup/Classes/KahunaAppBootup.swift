@@ -13,6 +13,7 @@ public class KahunaAppBootup: NSObject {
     public var message: String!
     public var title: String!
     public var status: KahunaStatus!
+    public var url: String!
 
     /**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
@@ -21,6 +22,7 @@ public class KahunaAppBootup: NSObject {
         action = dictionary["action"] as? String
         message = dictionary["message"] as? String
         title = dictionary["title"] as? String
+        url = dictionary["url"] as? String
         if let statusData = dictionary["status"] as? [String: Any] {
             status = KahunaStatus(fromDictionary: statusData)
         }
