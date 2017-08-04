@@ -60,6 +60,7 @@ shared.getAppBootupActionMessage { (success, jsonObject) in
         print(kahunaAppBooup.action)
         print(kahunaAppBooup.message)
         print(kahunaAppBooup.title)
+        print(kahunaAppBooup.url)
     }
 }
 ```
