@@ -20,6 +20,17 @@ public class AppBootupHandler: NSObject {
     let endPoint = "/datarepo/v1/controlAppBootup/check"
     let kTimeoutInterval = 60
     var production = false
+    var bootUpViewController: UIViewController!
+
+    public let remoteUpdateUpdateAvailableCode = 7001
+
+    public enum RemoteUpdateCases {
+        static let warning = "WARNING"
+        static let block = "BLOCK"
+        static let redirectAppStore = "REDIRECT_TO_APPSTORE"
+        static let redirectSettings = "REDIRECT_TO_SETTINGS"
+        static let redirectURL = "REDIRECT_TO_URL"
+    }
 
     public static let sharedInstance = AppBootupHandler()
 
@@ -36,7 +47,6 @@ public class AppBootupHandler: NSObject {
         self.production = flag
     }
 
-
     func deviceRemainingFreeSpaceInBytes() -> String? {
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
         guard
@@ -49,7 +59,7 @@ public class AppBootupHandler: NSObject {
         return freeSize.stringValue
     }
 
-    public func initAllAppBootupKeys(appId: String, checkFreeSpace: Bool = false) {
+    public func initAllAppBootupKeysWithViewController(appId: String, viewController: UIViewController, checkFreeSpace: Bool = false) {
         self.appId = appId
         if let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String {
             self.appVersion = appVersion
@@ -61,6 +71,7 @@ public class AppBootupHandler: NSObject {
                     self.freeSpace = space!
                 }
             }
+            self.bootUpViewController = viewController
         }
     }
 
@@ -100,6 +111,12 @@ public class AppBootupHandler: NSObject {
         return jsonDic
     }
 
+    public func checkForRemoteUpdateByCustomView(completionHandler: @escaping AppBootupCompletionBlock) {
+        self.getAppBootupActionMessage { (success, jsonObject) in
+            completionHandler(success, jsonObject)
+        }
+    }
+
     public func getAppBootupActionMessage(completionHandler: @escaping AppBootupCompletionBlock) {
         if self.serverBaseURL != nil && self.serverBaseURL.characters.count > 0 && self.appId != nil && self.appId.characters.count > 0 {
             let jsonDic = self.createParametersDic()
@@ -130,6 +147,35 @@ public class AppBootupHandler: NSObject {
                 }
             })
             task.resume()
+        }
+    }
+
+    public func checkForRemoteUpdate() {
+        self.getAppBootupActionMessage { (success, jsonObject) in
+            if success && jsonObject is KahunaAppBootup {
+                let kahunaAppBooup = jsonObject as! KahunaAppBootup
+                //7001 Error Code: Some thing is available for verification
+                if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode {
+                    let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
+                    var titleStrButton = "Update"
+                    if kahunaAppBooup.url.characters.count > 0 {
+                        titleStrButton = "Install"
+                    }
+                    let updateAction = UIAlertAction(title: titleStrButton, style: .default, handler: { (UIAlertAction) in
+                        if kahunaAppBooup.action == RemoteUpdateCases.redirectSettings {
+                            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+                        } else {
+                            UIApplication.shared.openURL(URL(string: kahunaAppBooup.url)!)
+                        }
+                    })
+                    controller.addAction(updateAction)
+                    if kahunaAppBooup.action != RemoteUpdateCases.block {
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                        controller.addAction(cancelAction)
+                    }
+                    self.bootUpViewController.present(controller, animated: true, completion: nil)
+                }
+            }
         }
     }
 
