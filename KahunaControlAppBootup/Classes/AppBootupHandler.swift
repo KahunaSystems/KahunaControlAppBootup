@@ -117,7 +117,7 @@ public class AppBootupHandler: NSObject {
         }
     }
 
-    public func getAppBootupActionMessage(completionHandler: @escaping AppBootupCompletionBlock) {
+    func getAppBootupActionMessage(completionHandler: @escaping AppBootupCompletionBlock) {
         if self.serverBaseURL != nil && self.serverBaseURL.characters.count > 0 && self.appId != nil && self.appId.characters.count > 0 {
             let jsonDic = self.createParametersDic()
             let urlStr = self.serverBaseURL + self.endPoint

@@ -22,7 +22,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.1.6'
+pod 'KahunaControlAppBootup', '~> 0.1.7'
 ```
 > New development will happen exclusively on the master/Swift 3 branch.
 
@@ -33,6 +33,15 @@ shared.initServerBaseURL(serverBaseURL: kServerBaseURL)
 ```
 Note:
 Add import KahunaControlAppBootup into respected file
+
+
+## Set for Production app type
+
+```swift
+shared.isAppTypeProduction(flag: true)
+```
+> _Note:_ Default value for production = false
+
 
 ## Set all App Boot Up key and default bool value of checkFreeSpace = false
 ```swift
@@ -45,16 +54,15 @@ shared.initAllAppBootupKeys(appId: logCampId, checkFreeSpace: true)
 ```
 > _Note:_ Default value for checkFreeSpace = false
 
-## Set for Production app type
-
-```swift
-shared.isAppTypeProduction(flag: true)
-```
-> _Note:_ Default value for production = false
-
 ## Detect an app to boot or not in a device based on that apply app version, os version and free space.
+- Default View managed in a alert by library based on action.
 ```swift
-shared.getAppBootupActionMessage { (success, jsonObject) in
+shared.checkForRemoteUpdate()
+```
+
+- Custom View managed based on action managed by an app.
+```swift
+shared.checkForRemoteUpdateByCustomView { (success, jsonObject) in
     if success && jsonObject is KahunaAppBootup {
     let kahunaAppBooup = jsonObject as! KahunaAppBootup
         print(kahunaAppBooup.action)
