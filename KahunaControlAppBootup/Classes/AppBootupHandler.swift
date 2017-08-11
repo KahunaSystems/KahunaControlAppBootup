@@ -160,9 +160,10 @@ public class AppBootupHandler: NSObject {
                     if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode && kahunaAppBooup.title != nil && kahunaAppBooup.message != nil {
                         let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
                         if kahunaAppBooup.action != RemoteUpdateCases.block {
-                            let titleStrButton = "Continue"
+                            var titleStrButton = "Ok"
                             if kahunaAppBooup.url != nil {
-                                let updateAction = UIAlertAction(title: titleStrButton, style: .default, handler: { (UIAlertAction) in
+                                titleStrButton = "Cancel"
+                                let updateAction = UIAlertAction(title: "Continue", style: .default, handler: { (UIAlertAction) in
                                     if kahunaAppBooup.action == RemoteUpdateCases.redirectSettings {
                                         UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
                                     } else {
@@ -172,7 +173,7 @@ public class AppBootupHandler: NSObject {
                                 controller.addAction(updateAction)
                             }
                             if kahunaAppBooup.action == RemoteUpdateCases.warning {
-                                let cancelAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                                let cancelAction = UIAlertAction(title: titleStrButton, style: .default, handler: nil)
                                 controller.addAction(cancelAction)
                             }
                         }

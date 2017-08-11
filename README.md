@@ -22,7 +22,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.2'
+pod 'KahunaControlAppBootup', '~> 0.2.1'
 ```
 > New development will happen exclusively on the master/Swift 3 branch.
 
