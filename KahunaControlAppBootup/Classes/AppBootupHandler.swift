@@ -152,29 +152,35 @@ public class AppBootupHandler: NSObject {
     }
 
     public func checkForRemoteUpdate() {
-        self.getAppBootupActionMessage { (success, jsonObject) in
-            if success && jsonObject is KahunaAppBootup {
-                let kahunaAppBooup = jsonObject as! KahunaAppBootup
-                //7001 Error Code: Some thing is available for verification
-                if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode {
-                    let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
-                    var titleStrButton = "Update"
-                    if kahunaAppBooup.url.characters.count > 0 {
-                        titleStrButton = "Install"
-                    }
-                    let updateAction = UIAlertAction(title: titleStrButton, style: .default, handler: { (UIAlertAction) in
-                        if kahunaAppBooup.action == RemoteUpdateCases.redirectSettings {
-                            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
-                        } else {
-                            UIApplication.shared.openURL(URL(string: kahunaAppBooup.url)!)
+        if self.bootUpViewController != nil {
+            self.getAppBootupActionMessage { (success, jsonObject) in
+                if success && jsonObject is KahunaAppBootup {
+                    let kahunaAppBooup = jsonObject as! KahunaAppBootup
+                    //7001 Error Code: Some thing is available for verification
+                    if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode {
+                        if kahunaAppBooup.title != nil && kahunaAppBooup.message != nil {
+                            let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
+                            var titleStrButton = "Update"
+                            if kahunaAppBooup.url != nil {
+                                if kahunaAppBooup.url.characters.count > 0 {
+                                    titleStrButton = "Install"
+                                }
+                                let updateAction = UIAlertAction(title: titleStrButton, style: .default, handler: { (UIAlertAction) in
+                                    if kahunaAppBooup.action == RemoteUpdateCases.redirectSettings {
+                                        UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+                                    } else {
+                                        UIApplication.shared.openURL(URL(string: kahunaAppBooup.url)!)
+                                    }
+                                })
+                                controller.addAction(updateAction)
+                            }
+                            if kahunaAppBooup.action != RemoteUpdateCases.block {
+                                let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                                controller.addAction(cancelAction)
+                            }
+                            self.bootUpViewController.present(controller, animated: true, completion: nil)
                         }
-                    })
-                    controller.addAction(updateAction)
-                    if kahunaAppBooup.action != RemoteUpdateCases.block {
-                        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-                        controller.addAction(cancelAction)
                     }
-                    self.bootUpViewController.present(controller, animated: true, completion: nil)
                 }
             }
         }
