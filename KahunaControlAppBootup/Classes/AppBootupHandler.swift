@@ -157,14 +157,11 @@ public class AppBootupHandler: NSObject {
                 if success && jsonObject is KahunaAppBootup {
                     let kahunaAppBooup = jsonObject as! KahunaAppBootup
                     //7001 Error Code: Some thing is available for verification
-                    if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode {
-                        if kahunaAppBooup.title != nil && kahunaAppBooup.message != nil {
-                            let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
-                            var titleStrButton = "Update"
+                    if kahunaAppBooup.status != nil && kahunaAppBooup.status.code != nil && kahunaAppBooup.status.code == self.remoteUpdateUpdateAvailableCode && kahunaAppBooup.title != nil && kahunaAppBooup.message != nil {
+                        let controller = UIAlertController(title: kahunaAppBooup.title, message: kahunaAppBooup.message, preferredStyle: .alert)
+                        if kahunaAppBooup.action != RemoteUpdateCases.block {
+                            let titleStrButton = "Continue"
                             if kahunaAppBooup.url != nil {
-                                if kahunaAppBooup.url.characters.count > 0 {
-                                    titleStrButton = "Install"
-                                }
                                 let updateAction = UIAlertAction(title: titleStrButton, style: .default, handler: { (UIAlertAction) in
                                     if kahunaAppBooup.action == RemoteUpdateCases.redirectSettings {
                                         UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
@@ -174,12 +171,12 @@ public class AppBootupHandler: NSObject {
                                 })
                                 controller.addAction(updateAction)
                             }
-                            if kahunaAppBooup.action != RemoteUpdateCases.block {
-                                let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                            if kahunaAppBooup.action == RemoteUpdateCases.warning {
+                                let cancelAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                                 controller.addAction(cancelAction)
                             }
-                            self.bootUpViewController.present(controller, animated: true, completion: nil)
                         }
+                        self.bootUpViewController.present(controller, animated: true, completion: nil)
                     }
                 }
             }
