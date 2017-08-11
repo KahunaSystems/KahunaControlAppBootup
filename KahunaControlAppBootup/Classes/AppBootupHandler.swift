@@ -45,6 +45,7 @@ public class AppBootupHandler: NSObject {
 
     public func isAppTypeProduction(flag: Bool) {
         self.production = flag
+        self.appType = self.production ? "1" : "0"
     }
 
     func deviceRemainingFreeSpaceInBytes() -> String? {
