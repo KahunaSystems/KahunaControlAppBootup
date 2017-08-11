@@ -151,7 +151,7 @@ public class AppBootupHandler: NSObject {
         }
     }
 
-    public func checkForRemoteUpdate() {
+    public func checkForRemoteUpdate(completionHandler: @escaping AppBootupCompletionBlock) {
         if self.bootUpViewController != nil {
             self.getAppBootupActionMessage { (success, jsonObject) in
                 if success && jsonObject is KahunaAppBootup {
@@ -179,6 +179,7 @@ public class AppBootupHandler: NSObject {
                         self.bootUpViewController.present(controller, animated: true, completion: nil)
                     }
                 }
+                completionHandler(success, jsonObject)
             }
         }
     }

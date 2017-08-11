@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KahunaControlAppBootup'
-  s.version          = '0.1.9'
+  s.version          = '0.2'
   s.summary          = 'KahunaControlAppBootup library to detect an app to boot or not'
 
 # This description is used to generate tags and improve search results.
