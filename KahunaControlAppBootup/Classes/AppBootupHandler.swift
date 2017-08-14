@@ -145,6 +145,8 @@ public class AppBootupHandler: NSObject {
                         print(Error.description)
                         completionHandler(false, nil)
                     }
+                } else {
+                    completionHandler(false, nil)
                 }
             })
             task.resume()
@@ -182,6 +184,8 @@ public class AppBootupHandler: NSObject {
                 }
                 completionHandler(success, jsonObject)
             }
+        } else {
+            completionHandler(false, nil)
         }
     }
 
