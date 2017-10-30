@@ -87,9 +87,9 @@ Call setupRemoteUpdate in didFinishLaunchingWithOptions method
 ```swift
 func setupRemoteUpdate() {
   let shared = AppBootupHandler.sharedInstance
-  shared.initServerBaseURL(serverBaseURL: Constants.KALogger.KALoggerURL)
+  shared.initServerBaseURL(serverBaseURL: kLogCampBaseURL)
   if let rootViewController = self.window?.rootViewController {
-    shared.initAllAppBootupKeysWithViewController(appId: loggerAppID, viewController: rootViewController)
+    shared.initAllAppBootupKeysWithViewController(appId: logCampId, viewController: rootViewController)
     #if DEVELOPMENT
       shared.isAppTypeProduction(flag: false)
     #else
