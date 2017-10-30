@@ -29,7 +29,7 @@ pod 'KahunaControlAppBootup', '~> 0.2.2'
 ## Set Server URL
 ```swift
 let shared = AppBootupHandler.sharedInstance
-shared.initServerBaseURL(serverBaseURL: kServerBaseURL)
+shared.initServerBaseURL(serverBaseURL: kLogCampBaseURL)
 ```
 Note:
 Add import KahunaControlAppBootup into respected file
@@ -45,12 +45,12 @@ shared.isAppTypeProduction(flag: true)
 
 ## Set all App Boot Up key and default bool value of checkFreeSpace = false
 ```swift
-shared.initAllAppBootupKeys(appId: logCampId)
+shared.initAllAppBootupKeysWithViewController(appId: logCampId, viewController: rootViewController)
 ```
 OR
 
 ```swift
-shared.initAllAppBootupKeys(appId: logCampId, checkFreeSpace: true)
+shared.initAllAppBootupKeysWithViewController(appId: logCampId, viewController: rootViewController, checkFreeSpace: true)
 ```
 > _Note:_ Default value for checkFreeSpace = false
 
@@ -89,7 +89,7 @@ func setupRemoteUpdate() {
   let shared = AppBootupHandler.sharedInstance
   shared.initServerBaseURL(serverBaseURL: Constants.KALogger.KALoggerURL)
   if let rootViewController = self.window?.rootViewController {
-    shared.initAllAppBootupKeysWithViewController(appId: Constants.KALogger.KALoggerAppID, viewController: rootViewController)
+    shared.initAllAppBootupKeysWithViewController(appId: loggerAppID, viewController: rootViewController)
     #if DEVELOPMENT
       shared.isAppTypeProduction(flag: false)
     #else
