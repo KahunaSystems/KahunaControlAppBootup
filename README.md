@@ -104,11 +104,15 @@ Call checkForRemoteUpdate in applicationWillEnterForeground method
 ```swift
 func checkForRemoteUpdate(splashScreen: UIImageView? = nil) {
   if CheckConnectivity.hasConnectivity() {
-    AppBootupHandler.sharedInstance.checkForRemoteUpdate { (success, jsonObject) in
-      if let splashScreenView = splashScreen {
-        DispatchQueue.main.async {
-          splashScreenView.removeFromSuperview()
+    let shared = AppBootupHandler.sharedInstance
+    if let rootViewController = self.window?.rootViewController {
+      shared.initAllAppBootupKeysWithViewController(appId: logCampId, viewController: rootViewController)
+      AppBootupHandler.sharedInstance.checkForRemoteUpdate { (success, jsonObject) in
+        if let splashScreenView = splashScreen {
+          DispatchQueue.main.async {
+            splashScreenView.removeFromSuperview()
             MBProgressHUD.hideAllHUDs(for: self.window, animated: true)
+          }
         }
       }
     }
