@@ -81,6 +81,47 @@ then we need to perform check actions and show message with title
 - Action REDIRECT_TO_SETTINGS -> Prompt message in an alert to User with title and click ok then redirect to device settings to update an os version.
 - Action REDIRECT_TO_URL -> Prompt message in an alert to User with title and click install then redirect to respective url to update an app version.
 
+## Required methods to be written in appdelegate class.
+> _Note:_
+Call setupRemoteUpdate in didFinishLaunchingWithOptions method
+```swift
+func setupRemoteUpdate() {
+  let shared = AppBootupHandler.sharedInstance
+  shared.initServerBaseURL(serverBaseURL: Constants.KALogger.KALoggerURL)
+  if let rootViewController = self.window?.rootViewController {
+    shared.initAllAppBootupKeysWithViewController(appId: Constants.KALogger.KALoggerAppID, viewController: rootViewController)
+    #if DEVELOPMENT
+      shared.isAppTypeProduction(flag: false)
+    #else
+      shared.isAppTypeProduction(flag: true)
+    #endif
+  }
+}
+```
+
+> _Note:_
+Call checkForRemoteUpdate in applicationWillEnterForeground method
+```swift
+func checkForRemoteUpdate(splashScreen: UIImageView? = nil) {
+  if CheckConnectivity.hasConnectivity() {
+    AppBootupHandler.sharedInstance.checkForRemoteUpdate { (success, jsonObject) in
+      if let splashScreenView = splashScreen {
+        DispatchQueue.main.async {
+          splashScreenView.removeFromSuperview()
+            MBProgressHUD.hideAllHUDs(for: self.window, animated: true)
+        }
+      }
+    }
+  } else {
+    if let splashScreenView = splashScreen {
+      DispatchQueue.main.async {
+        splashScreenView.removeFromSuperview()
+        MBProgressHUD.hideAllHUDs(for: self.window, animated: true)
+      }
+    }
+  }
+}
+```
 
 ## Author
 
