@@ -122,7 +122,7 @@ func checkForRemoteUpdate(splashScreen: UIImageView? = nil) {
 }
 ```
 
-## Example control app boot up json files.
+<!--## Example control app boot up json files.
 > _Note:_
 When rule fails, then alert comes
 Suppose your running version in device is not greater equal to 1.1.0 version then rules fails, alert comes
@@ -156,7 +156,7 @@ Warning Example JSON
 ```swift
 http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-warning-sample.json
 ```
-
+-->
 
 ## Author
 
