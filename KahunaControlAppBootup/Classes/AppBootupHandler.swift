@@ -54,8 +54,8 @@ public class AppBootupHandler: NSObject {
             let systemAttributes = try? FileManager.default.attributesOfFileSystem(forPath: documentDirectory),
             let freeSize = systemAttributes[.systemFreeSize] as? NSNumber
             else {
-            // something failed
-            return nil
+                // something failed
+                return nil
         }
         return freeSize.stringValue
     }
@@ -82,14 +82,12 @@ public class AppBootupHandler: NSObject {
 
     func createURLRequest(_ path: String, parameters: NSMutableDictionary, timeoutInterval interval: Int) -> URLRequest? {
         var jsonData: Data!
-        if parameters != nil {
-            do {
-                jsonData = try JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)
-            } catch let error as NSError {
-                print(error)
-            }
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)
+        } catch let error as NSError {
+            print(error)
         }
-        if let url = NSURL(string: path) as? URL {
+        if let url = NSURL(string: path) as URL? {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -101,12 +99,12 @@ public class AppBootupHandler: NSObject {
     }
 
     func createParametersDic() -> NSMutableDictionary {
-        var jsonDic = NSMutableDictionary()
+        let jsonDic = NSMutableDictionary()
         jsonDic.setValue(self.appId, forKey: "appId")
         jsonDic.setValue(self.appType, forKey: "appType")
         jsonDic.setValue(self.appVersion, forKey: "appVersion")
         jsonDic.setValue(self.osVersion, forKey: "osVersion")
-        if self.freeSpace != nil && self.freeSpace.characters.count > 0 {
+        if self.freeSpace.count > 0 {
             jsonDic.setValue(self.freeSpace, forKey: "freeSpace")
         }
         return jsonDic
@@ -119,7 +117,7 @@ public class AppBootupHandler: NSObject {
     }
 
     func getAppBootupActionMessage(completionHandler: @escaping AppBootupCompletionBlock) {
-        if self.serverBaseURL != nil && self.serverBaseURL.characters.count > 0 && self.appId != nil && self.appId.characters.count > 0 {
+        if self.serverBaseURL.count > 0 && self.appId.count > 0 {
             let jsonDic = self.createParametersDic()
             let urlStr = self.serverBaseURL + self.endPoint
             let request = self.createURLRequest(urlStr, parameters: jsonDic, timeoutInterval: kTimeoutInterval)

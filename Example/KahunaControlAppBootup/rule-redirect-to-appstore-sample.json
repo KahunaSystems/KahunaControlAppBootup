@@ -1,0 +1,17 @@
+// When rule fails, then alert comes
+// Suppose your running version in device is not greater equal to 1.1.0 version then rules fails, alert comes
+{
+  "appVersionRule": {
+    "rule": {
+      ">=": [
+        {
+          "var": "appVersion"
+        },
+        "1.1.0"
+      ]
+    },
+    "action":"REDIRECT_TO_APPSTORE",
+    "title": "Application Update",
+    "message": "Please update your application."
+  }
+}

@@ -1,0 +1,16 @@
+// When rule fails, then alert comes
+// Suppose your running version in device is not equal to logcamp version then rules fails, alert comes
+{
+  "appVersionRule": {
+    "rule": {
+      "==": [
+        {
+          "var": "appVersion"
+        },
+        "$LATEST_LOGCAMP_VERSION"
+      ]
+    },
+    "title": "Redirect",
+    "message": "Please update your application."
+  }
+}

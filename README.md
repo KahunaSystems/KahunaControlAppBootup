@@ -1,10 +1,5 @@
 # KahunaControlAppBootup
 
-[![CI Status](http://img.shields.io/travis/siddharthchopra/KahunaControlAppBootup.svg?style=flat)](https://travis-ci.org/siddharthchopra/KahunaControlAppBootup)
-[![Version](https://img.shields.io/cocoapods/v/KahunaControlAppBootup.svg?style=flat)](http://cocoapods.org/pods/KahunaControlAppBootup)
-[![License](https://img.shields.io/cocoapods/l/KahunaControlAppBootup.svg?style=flat)](http://cocoapods.org/pods/KahunaControlAppBootup)
-[![Platform](https://img.shields.io/cocoapods/p/KahunaControlAppBootup.svg?style=flat)](http://cocoapods.org/pods/KahunaControlAppBootup)
-
 ![LogCamp](http://www.kahuna-mobihub.com/templates/ja_puresite/images/logo-trans.png)
 
 KahunaControlAppBootup is written in Swift
@@ -22,7 +17,7 @@ KahunaControlAppBootup is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KahunaControlAppBootup', '~> 0.2.2'
+pod 'KahunaControlAppBootup', '~> 1.0'
 ```
 > New development will happen exclusively on the master/Swift 3 branch.
 
@@ -126,6 +121,42 @@ func checkForRemoteUpdate(splashScreen: UIImageView? = nil) {
   }
 }
 ```
+
+## Example control app boot up json files.
+> _Note:_
+When rule fails, then alert comes
+Suppose your running version in device is not greater equal to 1.1.0 version then rules fails, alert comes
+
+> _Note:_
+Block Example JSON
+```swift
+http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-block-sample.json
+```
+
+> _Note:_
+Logcamp Version Example JSON
+```swift
+http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-logcamp-version-sample.json
+```
+
+> _Note:_
+Redirect To Appstore Example JSON
+```swift
+http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-redirect-to-appstore-sample.json
+```
+
+> _Note:_
+Redirect To URL Example JSON
+```swift
+http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-redirect-to-url-sample.json
+```
+
+> _Note:_
+Warning Example JSON
+```swift
+http://192.168.0.137/KahunaLibraries/KahunaControlAppBootup/blob/master/Example/KahunaControlAppBootup/rule-warning-sample.json
+```
+
 
 ## Author
 
